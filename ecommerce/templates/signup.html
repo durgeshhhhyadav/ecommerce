@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>signup</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{% static "images/icons/favicon.png" %}"/>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url({% static 'images/signup.jpg' %}); background-size:cover;">
+	<div class="jumbotron" style="background-image:url({% static 'images/signUp.jpg' %}); background-size:cover;">
+		<div  class="container well" style="width:40%;">
+			<form name="signup" action="/module1/signup" method=post >
+				<!--<div>-->
+					<!-- <label style="font-size:20px;">name</label> -->
+					<!--<div class="row form-group">
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="First Name" name="fname" autofocus="autofocus" required>
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Last Name" name="lname">
+						</div>
+					</div>-->
+					
+					<div class="form-group" style="font-size:20px; ">
+						{{ data }}
+						{% csrf_token %}
+					
+					</div>
+					<!--<div class="row from-group">
+						<div class="col-md-6">
+							<input type="password" class="form-control" placeholder="Password" name="password" required>
+						
+						</div>
+						<div class="col-md-6">
+							<input type="password" class="form-control" placeholder="Re-Password" name="repassword" required>
+						
+						</div>
+					</div>
+					<div class="row from-group">
+						<div class="col-md-6">
+							<label><h4>male</h4></label><input type="radio" value="male"  name="gender">
+						
+						</div>
+						<div class="col-md-6">
+							<label><h4>female</h4></label><input type="radio" value="female"   name="gender">
+						
+						</div>
+					</div>-->
+					<div class="from-group">
+						<center><input type="submit" value="signUp" class="btn btn-success btn-lg" style="padding:10px 30px;"></center>
+						<center><a href="/module1/login">Existing User?Login</a></center>
+					
+					</div>
+					
+				<!--</div>-->
+			
+			
+			</form>
+		
+		</div>
+	</div>
+
+</body>
+</html>

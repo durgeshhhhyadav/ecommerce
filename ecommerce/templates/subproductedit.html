@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>update</title>
+</head>
+<body>
+	<form method="POST" action="/module1/subproductupdated">
+		{% csrf_token %}
+
+		<h1>update Details</h1>
+		<input type="hidden" name="pid"  value="{{ productid }}"/>
+		<div>
+		<label>product id:</label>
+		<input type="hidden" name="spid"  value="{{ subproduct.id }}"/>
+		</div>
+
+		<div>
+		<label>product color:</label>
+		<input type="text" name="spcolor" value="{{ subproduct.color }}"/>
+		</div>
+
+		<div>
+		<label>product size:</label>
+		<input type="text" name="spsize" value="{{ subproduct.size }}"/>
+		</div>
+
+		<div>
+		<label>product price:</label>
+		<input type="text" name="spprice" value="{{ subproduct.price }}"/>
+		</div>
+
+		<div>
+		<label>product quantity:</label>
+		<input type="text" name="spquantity" value="{{ subproduct.quantity }}"/>
+		</div>
+
+		<div>
+		<label>product discount:</label>
+		<input type="text" name="spdiscount" id="id_pcategory" value="{{ subproduct.discount }}"/>
+		</div>
+
+		<input type="submit" value="save">
+
+
+	</form>
+
+</body>
+</html>

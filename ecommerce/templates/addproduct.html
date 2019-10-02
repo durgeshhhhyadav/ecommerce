@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add product</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url({% static 'images/signup.jpg' %}); background-size:cover;">
+	<div class="jumbotron" style="background-image:url({% static 'images/signUp.jpg' %}); background-size:cover;">
+		<div  class="container well" style="width:40%;">
+			<a href="/module1/adminshowproduct"><button  class="btn btn-success btn-lg" style="padding:10px 30px;">
+				Home
+			</button></a>
+			<form name="addproduct" action="/module1/addproduct" method=post >
+				
+					
+					<div class="form-group" style="font-size:20px; ">
+						{{ data }}
+						{% csrf_token %}
+					
+					</div>
+					<div class="from-group">
+						<center><input type="submit" value="Add" class="btn btn-success btn-lg" style="padding:10px 30px;"></center>
+						<center><a href="##">update product</a></center>
+					
+					</div>
+			</form>
+		
+		</div>
+	</div>
+
+
+</body>
+</html>
